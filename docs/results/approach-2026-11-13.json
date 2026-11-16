@@ -1,0 +1,268 @@
+{
+  "initial_success": "telemetry/velocity_phase_current-1794573353.json",
+  "created_at": 1794579766.432429,
+  "plans": [
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ]
+  ],
+  "results": [
+    {
+      "index": 1,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794579767.json",
+      "summary": {
+        "max_hold_s": 30.322,
+        "longest_balance_mode_s": 30.676,
+        "peak_deg": 179.996994,
+        "best_error_deg": -0.003036676314193363,
+        "best_pendulum_speed": -0.054321,
+        "shaft_range_deg": [
+          -94.39453125,
+          89.033203125
+        ],
+        "max_shaft_disagreement_deg": 1.799991944765523,
+        "balance_samples": 1467,
+        "final_shaft_delta_deg": 0.439453125
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100004d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,242551_ms",
+        "EVENT,CONTROL_TIMING,n=25929,mean_us=2156,max_us=8110,over4ms=230",
+        "EVENT,TRIAL_FINISH,success_30s_upright,step=2,speed=0.40263",
+        "EVENT,BRAKE_COMPLETE,step=3",
+        "EVENT,HOME_BEGIN,from_step=3",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=0,reverse=3,reason=success_30s_upright"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794579767.json",
+        "firmware_success_event": true,
+        "audited_success": true,
+        "continuous_sampled_hold_s": 29.986,
+        "failure": null,
+        "return_delta_deg": 0.439453125,
+        "samples": 1434,
+        "maximum_gap_ms": 22,
+        "rms_target_error_deg": 1.0620050048258325,
+        "max_vertical_error_deg": 5.182555000000008,
+        "last10s_arm_range_deg": [
+          -4.837482664289541,
+          4.950011575253234
+        ]
+      },
+      "center_error_deg": -0.3515625
+    },
+    {
+      "index": 2,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794579851.json",
+      "summary": {
+        "max_hold_s": 30.138,
+        "longest_balance_mode_s": 31.095,
+        "peak_deg": 179.999481,
+        "best_error_deg": -0.0005156620156177409,
+        "best_pendulum_speed": 0.756804,
+        "shaft_range_deg": [
+          -97.03125,
+          93.515625
+        ],
+        "max_shaft_disagreement_deg": 2.5488234440079154,
+        "balance_samples": 1514,
+        "final_shaft_delta_deg": 0.263671875
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100024d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,326261_ms",
+        "EVENT,CONTROL_TIMING,n=31635,mean_us=2181,max_us=8124,over4ms=469",
+        "EVENT,TRIAL_FINISH,success_30s_upright,step=17,speed=-0.14385",
+        "EVENT,BRAKE_COMPLETE,step=17",
+        "EVENT,HOME_BEGIN,from_step=17",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=0,reverse=17,reason=success_30s_upright"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794579851.json",
+        "firmware_success_event": true,
+        "audited_success": true,
+        "continuous_sampled_hold_s": 29.991,
+        "failure": null,
+        "return_delta_deg": 0.263671875,
+        "samples": 1434,
+        "maximum_gap_ms": 22,
+        "rms_target_error_deg": 1.527098370046794,
+        "max_vertical_error_deg": 6.85599400000001,
+        "last10s_arm_range_deg": [
+          -3.375007892218114,
+          3.2624789812544206
+        ]
+      },
+      "center_error_deg": -0.17578125
+    },
+    {
+      "index": 3,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794579949.json",
+      "summary": {
+        "max_hold_s": 29.987,
+        "longest_balance_mode_s": 29.987,
+        "peak_deg": 179.999986,
+        "best_error_deg": -0.0,
+        "best_pendulum_speed": -0.033017,
+        "shaft_range_deg": [
+          -88.06640625,
+          69.345703125
+        ],
+        "max_shaft_disagreement_deg": 1.7332268288237351,
+        "balance_samples": 1436,
+        "final_shaft_delta_deg": -0.087890625
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100024d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,423932_ms",
+        "EVENT,CONTROL_TIMING,n=16810,mean_us=2131,max_us=7938,over4ms=70",
+        "EVENT,TRIAL_FINISH,success_30s_upright,step=-51,speed=0.16473",
+        "EVENT,BRAKE_COMPLETE,step=-51",
+        "EVENT,HOME_BEGIN,from_step=-51",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=51,reverse=0,reason=success_30s_upright"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794579949.json",
+        "firmware_success_event": true,
+        "audited_success": true,
+        "continuous_sampled_hold_s": 29.966,
+        "failure": null,
+        "return_delta_deg": -0.087890625,
+        "samples": 1435,
+        "maximum_gap_ms": 22,
+        "rms_target_error_deg": 1.3422505885840819,
+        "max_vertical_error_deg": 3.9550879999999893,
+        "last10s_arm_range_deg": [
+          -6.187485821176787,
+          5.9624852950289124
+        ]
+      },
+      "center_error_deg": -0.52734375
+    },
+    {
+      "index": 4,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794580013.json",
+      "summary": {
+        "max_hold_s": 0.0,
+        "longest_balance_mode_s": 0.0,
+        "peak_deg": 179.259601,
+        "best_error_deg": -0.7404333586475629,
+        "best_pendulum_speed": 3.784185,
+        "shaft_range_deg": [
+          -97.119140625,
+          92.373046875
+        ],
+        "max_shaft_disagreement_deg": 2.8159936082974575,
+        "balance_samples": 0,
+        "final_shaft_delta_deg": 0.52734375
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100004d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,488657_ms",
+        "EVENT,CONTROL_TIMING,n=23030,mean_us=2170,max_us=7959,over4ms=214",
+        "EVENT,TRIAL_FINISH,swingup_timeout,step=103,speed=3.46488",
+        "EVENT,BRAKE_COMPLETE,step=151",
+        "EVENT,HOME_BEGIN,from_step=151",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=0,reverse=151,reason=swingup_timeout"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794580013.json",
+        "firmware_success_event": false,
+        "audited_success": false,
+        "continuous_sampled_hold_s": 0,
+        "failure": null,
+        "return_delta_deg": 0.52734375
+      },
+      "center_error_deg": -0.17578125
+    },
+    {
+      "index": 5,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794580092.json",
+      "summary": {
+        "max_hold_s": 30.055,
+        "longest_balance_mode_s": 30.055,
+        "peak_deg": 179.999986,
+        "best_error_deg": -0.0,
+        "best_pendulum_speed": 3.115044,
+        "shaft_range_deg": [
+          -97.3828125,
+          92.373046875
+        ],
+        "max_shaft_disagreement_deg": 1.9968851054871806,
+        "balance_samples": 1517,
+        "final_shaft_delta_deg": 0.087890625
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100024d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,567374_ms",
+        "EVENT,CONTROL_TIMING,n=33050,mean_us=2179,max_us=8023,over4ms=476",
+        "EVENT,TRIAL_FINISH,success_30s_upright,step=30,speed=-0.02104",
+        "EVENT,BRAKE_COMPLETE,step=30",
+        "EVENT,HOME_BEGIN,from_step=30",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=0,reverse=30,reason=success_30s_upright"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794580092.json",
+        "firmware_success_event": true,
+        "audited_success": true,
+        "continuous_sampled_hold_s": 29.971,
+        "failure": null,
+        "return_delta_deg": 0.087890625,
+        "samples": 1433,
+        "maximum_gap_ms": 22,
+        "rms_target_error_deg": 0.9154512939741012,
+        "max_vertical_error_deg": 3.6035369999999887,
+        "last10s_arm_range_deg": [
+          -4.162481085845918,
+          3.8250089445138626
+        ]
+      },
+      "center_error_deg": -0.17578125
+    }
+  ],
+  "status": "completed_comparison",
+  "success_criterion": "Five repeated physical swing-ups with30seconds of sustained balance; campaign alone is not completion.",
+  "finished_at": 1794580191.819328
+}

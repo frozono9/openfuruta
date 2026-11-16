@@ -1,0 +1,5 @@
+-r requirements.txt
+imageio==2.38.1
+imageio-ffmpeg==0.8.1
+stable-baselines3==2.9.2
+trimesh==5.2.0

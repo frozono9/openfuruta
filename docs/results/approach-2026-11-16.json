@@ -1,0 +1,238 @@
+{
+  "initial_success": "telemetry/velocity_phase_current-1794573353.json",
+  "created_at": 1794865428.416638,
+  "plans": [
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ],
+    [
+      "v2",
+      "134.2,1.17,.9934,4"
+    ]
+  ],
+  "results": [
+    {
+      "index": 1,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794865437.json",
+      "summary": {
+        "max_hold_s": 30.17,
+        "longest_balance_mode_s": 30.192,
+        "peak_deg": 179.993497,
+        "best_error_deg": -0.006531718864491385,
+        "best_pendulum_speed": 0.245759,
+        "shaft_range_deg": [
+          -97.20703125,
+          88.76953125
+        ],
+        "max_shaft_disagreement_deg": 2.2605217557489894,
+        "balance_samples": 2025,
+        "final_shaft_delta_deg": 0.0
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100004d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,17847_ms",
+        "EVENT,CONTROL_TIMING,n=36432,mean_us=2154,max_us=8083,over4ms=289",
+        "EVENT,TRIAL_FINISH,success_30s_upright,step=-34,speed=0.05561",
+        "EVENT,BRAKE_COMPLETE,step=-34",
+        "EVENT,HOME_BEGIN,from_step=-34",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=34,reverse=0,reason=success_30s_upright"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794865437.json",
+        "firmware_success_event": true,
+        "audited_success": true,
+        "continuous_sampled_hold_s": 29.962,
+        "failure": null,
+        "return_delta_deg": 0.0,
+        "samples": 1434,
+        "maximum_gap_ms": 22,
+        "rms_target_error_deg": 1.7549464421774592,
+        "max_vertical_error_deg": 7.56511900000001,
+        "last10s_arm_range_deg": [
+          -3.8250089445138626,
+          3.937480559698044
+        ]
+      },
+      "center_error_deg": -0.439453125
+    },
+    {
+      "index": 2,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794865572.json",
+      "summary": {
+        "max_hold_s": 0.0,
+        "longest_balance_mode_s": 0.0,
+        "peak_deg": 179.296883,
+        "best_error_deg": 0.7031338061845462,
+        "best_pendulum_speed": 2.433911,
+        "shaft_range_deg": [
+          -87.890625,
+          88.681640625
+        ],
+        "max_shaft_disagreement_deg": 1.7894384471983038,
+        "balance_samples": 0,
+        "final_shaft_delta_deg": -0.087890625
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100024d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,152770_ms",
+        "EVENT,CONTROL_TIMING,n=23185,mean_us=2156,max_us=7886,over4ms=114",
+        "EVENT,TRIAL_FINISH,swingup_timeout,step=-96,speed=3.50000",
+        "EVENT,BRAKE_COMPLETE,step=-47",
+        "EVENT,HOME_BEGIN,from_step=-47",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=47,reverse=0,reason=swingup_timeout"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794865572.json",
+        "firmware_success_event": false,
+        "audited_success": false,
+        "continuous_sampled_hold_s": 0,
+        "failure": null,
+        "return_delta_deg": -0.087890625
+      },
+      "center_error_deg": -0.17578125
+    },
+    {
+      "index": 3,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794865651.json",
+      "summary": {
+        "max_hold_s": 0.0,
+        "longest_balance_mode_s": 0.0,
+        "peak_deg": 78.13478,
+        "best_error_deg": 101.86519236805735,
+        "best_pendulum_speed": 0.159559,
+        "shaft_range_deg": [
+          -23.466796875,
+          22.587890625
+        ],
+        "max_shaft_disagreement_deg": 1.2304729863523853,
+        "balance_samples": 0,
+        "final_shaft_delta_deg": 0.439453125
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100004d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,231681_ms",
+        "EVENT,CONTROL_TIMING,n=23420,mean_us=2134,max_us=3640,over4ms=0",
+        "EVENT,TRIAL_FINISH,swingup_timeout,step=-138,speed=3.39645",
+        "EVENT,BRAKE_COMPLETE,step=-92",
+        "EVENT,HOME_BEGIN,from_step=-92",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=92,reverse=0,reason=swingup_timeout"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794865651.json",
+        "firmware_success_event": false,
+        "audited_success": false,
+        "continuous_sampled_hold_s": 0,
+        "failure": null,
+        "return_delta_deg": 0.439453125
+      },
+      "center_error_deg": -0.263671875
+    },
+    {
+      "index": 4,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794865730.json",
+      "summary": {
+        "max_hold_s": 29.985,
+        "longest_balance_mode_s": 29.985,
+        "peak_deg": 179.972923,
+        "best_error_deg": -0.02710090370968794,
+        "best_pendulum_speed": 0.123098,
+        "shaft_range_deg": [
+          -96.767578125,
+          83.232421875
+        ],
+        "max_shaft_disagreement_deg": 1.6699261113523853,
+        "balance_samples": 1434,
+        "final_shaft_delta_deg": 0.439453125
+      },
+      "failure": null,
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100004d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,310554_ms",
+        "EVENT,CONTROL_TIMING,n=17629,mean_us=2133,max_us=7918,over4ms=92",
+        "EVENT,TRIAL_FINISH,success_30s_upright,step=-15,speed=-0.33654",
+        "EVENT,BRAKE_COMPLETE,step=-16",
+        "EVENT,HOME_BEGIN,from_step=-16",
+        "EVENT,STOP,centered",
+        "EVENT,HOME_COMPLETE,step=0,forward=16,reverse=0,reason=success_30s_upright"
+      ],
+      "audit": {
+        "trial": "telemetry/velocity_phase_current-1794865730.json",
+        "firmware_success_event": true,
+        "audited_success": true,
+        "continuous_sampled_hold_s": 29.985,
+        "failure": null,
+        "return_delta_deg": 0.439453125,
+        "samples": 1434,
+        "maximum_gap_ms": 22,
+        "rms_target_error_deg": 1.0347342529720696,
+        "max_vertical_error_deg": 7.49780100000001,
+        "last10s_arm_range_deg": [
+          -4.72501104910536,
+          4.72501104910536
+        ]
+      },
+      "center_error_deg": -0.17578125
+    },
+    {
+      "index": 5,
+      "name": "v2",
+      "approach": "134.2,1.17,.9934,4",
+      "trial": "telemetry/velocity_phase_current-1794865796.json",
+      "summary": {
+        "max_hold_s": 0.0,
+        "longest_balance_mode_s": 0.0,
+        "peak_deg": 74.531262,
+        "best_error_deg": 105.46875312475315,
+        "best_pendulum_speed": -1.618442,
+        "shaft_range_deg": [
+          -23.37890625,
+          22.939453125
+        ],
+        "max_shaft_disagreement_deg": 1.1390840720628468,
+        "balance_samples": 0,
+        "final_shaft_delta_deg": -10.458984375
+      },
+      "failure": "RuntimeError('lost telemetry')",
+      "events": [
+        "EVENT,TMC_UART_ID,0x2100004d,address=3,turnaround_us=790",
+        "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+        "EVENT,SWINGUP_BEGIN,376784_ms"
+      ]
+    }
+  ],
+  "status": "stopped",
+  "success_criterion": "Five repeated physical swing-ups with30seconds of sustained balance; campaign alone is not completion.",
+  "reason": "RuntimeError('Trial guard or return failure; no further attempts')",
+  "finished_at": 1794865824.074004
+}

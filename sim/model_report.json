@@ -1,0 +1,64 @@
+{
+  "arm": {
+    "mass_kg": 0.041,
+    "com_m": [
+      7.079457788832434e-07,
+      0.04341343664001473,
+      0.06381459240021979
+    ],
+    "inertia_kg_m2": [
+      [
+        3.0383547249331195e-05,
+        7.549720165420439e-10,
+        3.1378208053840058e-09
+      ],
+      [
+        7.549720165420439e-10,
+        8.100837236458576e-06,
+        -6.710856376987184e-06
+      ],
+      [
+        3.1378208053840058e-09,
+        -6.710856376987184e-06,
+        2.830907468362036e-05
+      ]
+    ]
+  },
+  "pendulum": {
+    "mass_kg": 0.0178,
+    "com_m": [
+      2.3995882782488697e-13,
+      -0.001311952579078808,
+      -0.04621285840315252
+    ],
+    "inertia_kg_m2": [
+      [
+        2.081394355563133e-05,
+        2.8549388814493553e-17,
+        -2.5449212717164193e-17
+      ],
+      [
+        2.8549388814493553e-17,
+        2.115381994692891e-05,
+        1.4314078410634334e-06
+      ],
+      [
+        -2.5449212717164193e-17,
+        1.4314078410634334e-06,
+        7.841096909855743e-07
+      ]
+    ]
+  },
+  "source_sha256": "994e81c2718b30030300a6362c400c20fc5e5505d3a31185fc6c0ad37d08bb29",
+  "hinge_in_arm_frame_m": [
+    6.7e-06,
+    0.075,
+    0.0745
+  ],
+  "assumptions": "Geometry from Alex's STEP. All masses except nominal euro 50-cent mass are unmeasured estimates. Motor strength, rolloff, damping, inertia, friction, limits and sensor timing are unmeasured starting assumptions. Rigid friction fit. No lower encoder. 2026-11-10 STEP revision: sensor relocated1.5mm. Existing assumed component masses retained, not physically measured. Versioned candidate; historic validation uses original model.",
+  "contacts": "Visual meshes have no contact. Joint limit only; not a full collision validation.",
+  "original_supplied_filename": "ALatorre_DIYFutura.step",
+  "status": "New CAD candidate; not hardware validated; original main model preserved",
+  "source_comparison": "inspection/alatorre_v3/comparison.json",
+  "mujoco_load_verified": true
+}

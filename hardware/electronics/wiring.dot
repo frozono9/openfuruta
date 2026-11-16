@@ -1,0 +1,70 @@
+// Copyright 2026 Alex Latorre. SPDX-License-Identifier: CERN-OHL-P-2.0
+digraph OpenFuruta {
+  graph [rankdir=LR, bgcolor="white", pad=0.25, nodesep=0.24, ranksep=1.04,
+         labelloc=t, label="OpenFuruta electrical connections", fontname="Helvetica", fontsize=22]
+  node [shape=plain, fontname="Helvetica", fontsize=12]
+  edge [dir=none, color="#3f5365", fontname="Helvetica", fontsize=10]
+  esp [label=<
+  <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#6d7a88">
+    <TR><TD BGCOLOR="#e7eef7"><B>ESP32 DevKit</B></TD></TR>
+    <TR><TD PORT="step">GPIO32 · STEP</TD></TR>
+    <TR><TD PORT="dir">GPIO26 · DIR</TD></TR>
+    <TR><TD PORT="en">GPIO25 · EN</TD></TR>
+    <TR><TD PORT="uart">GPIO12 · UART</TD></TR>
+    <TR><TD HEIGHT="12"></TD></TR>
+    <TR><TD PORT="psda">GPIO27 · SDA</TD></TR>
+    <TR><TD PORT="pscl">GPIO14 · SCL</TD></TR>
+    <TR><TD HEIGHT="12"></TD></TR>
+    <TR><TD PORT="ssda">GPIO13 · SDA</TD></TR>
+    <TR><TD PORT="sscl">GPIO33 · SCL</TD></TR>
+    <TR><TD BGCOLOR="#f3f6f9">USB powered</TD></TR>
+  </TABLE>>]
+  driver [label=<
+  <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#6d7a88">
+    <TR><TD COLSPAN="2" BGCOLOR="#e3f3ee"><B>MKS TMC2209 V2.0</B></TD></TR>
+    <TR><TD PORT="step" ALIGN="LEFT">STEP</TD><TD PORT="a" ALIGN="RIGHT">A1 / A2</TD></TR>
+    <TR><TD PORT="dir" ALIGN="LEFT">DIR</TD><TD PORT="b" ALIGN="RIGHT">B1 / B2</TD></TR>
+    <TR><TD PORT="en" ALIGN="LEFT">EN (active low)</TD><TD></TD></TR>
+    <TR><TD PORT="uart" ALIGN="LEFT">PDN / UART</TD><TD></TD></TR>
+    <TR><TD COLSPAN="2" BGCOLOR="#f3f6f9">VM = 12 V • VDD, MS1, MS2 = 3V3</TD></TR>
+  </TABLE>>]
+  pend [label=<
+  <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#6d7a88">
+    <TR><TD BGCOLOR="#e3f3ee"><B>Pendulum AS5600 · 0x36</B></TD></TR>
+    <TR><TD PORT="sda" ALIGN="LEFT">SDA</TD></TR>
+    <TR><TD PORT="scl" ALIGN="LEFT">SCL</TD></TR>
+    <TR><TD BGCOLOR="#f3f6f9">VCC = 3V3</TD></TR>
+  </TABLE>>]
+  shaft [label=<
+  <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#6d7a88">
+    <TR><TD BGCOLOR="#e7eef7"><B>Shaft AS5600 · 0x36</B></TD></TR>
+    <TR><TD PORT="sda" ALIGN="LEFT">SDA</TD></TR>
+    <TR><TD PORT="scl" ALIGN="LEFT">SCL</TD></TR>
+    <TR><TD BGCOLOR="#f3f6f9">VCC = 3V3</TD></TR>
+  </TABLE>>]
+  motor [label=<
+  <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#6d7a88">
+    <TR><TD BGCOLOR="#e3f3ee"><B>Bipolar stepper</B></TD></TR>
+    <TR><TD PORT="a">Winding A</TD></TR>
+    <TR><TD PORT="b">Winding B</TD></TR>
+  </TABLE>>]
+  power [label=<
+  <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6" COLOR="#6d7a88">
+    <TR><TD BGCOLOR="#fbefdc"><B>Power nets</B></TD></TR>
+    <TR><TD ALIGN="LEFT">12 V DC positive → fuse and cutoff → VM</TD></TR>
+    <TR><TD ALIGN="LEFT">ESP32 3V3 → VDD, MS1, MS2 and both encoder VCCs</TD></TR>
+    <TR><TD ALIGN="LEFT">Supply negative → ESP32, driver and both encoder grounds</TD></TR>
+  </TABLE>>]
+  {rank=same; driver; pend; shaft; power}
+  driver -> pend -> shaft -> power [style=invis]
+  esp:step:e -> driver:step:w
+  esp:dir:e -> driver:dir:w
+  esp:en:e -> driver:en:w
+  esp:uart:e -> driver:uart:w
+  esp:psda:e -> pend:sda:w [color="#096d66"]
+  esp:pscl:e -> pend:scl:w [color="#096d66"]
+  esp:ssda:e -> shaft:sda:w [color="#2d5d87"]
+  esp:sscl:e -> shaft:scl:w [color="#2d5d87"]
+  driver:a:e -> motor:a:w [label="pair"]
+  driver:b:e -> motor:b:w [label="pair"]
+}

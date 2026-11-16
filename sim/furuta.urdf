@@ -1,0 +1,101 @@
+<robot name="ALatorre_Furuta">
+  <link name="world" />
+  <link name="base">
+    <visual>
+      <geometry>
+        <mesh filename="assets/00.stl" />
+      </geometry>
+      <material name="color0">
+        <color rgba=".25 .3 .36 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/03.stl" />
+      </geometry>
+      <material name="color3">
+        <color rgba=".25 .32 .4 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/04.stl" />
+      </geometry>
+      <material name="color4">
+        <color rgba=".38 .45 .53 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="arm">
+    <inertial>
+      <origin xyz="7.079457789e-07 0.04341343664 0.0638145924" />
+      <mass value="0.041" />
+      <inertia ixx="3.0383547249331195e-05" iyy="8.100837236458576e-06" izz="2.830907468362036e-05" ixy="7.549720165420439e-10" ixz="3.1378208053840058e-09" iyz="-6.710856376987184e-06" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/02.stl" />
+      </geometry>
+      <material name="color2">
+        <color rgba=".12 .45 .25 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/05.stl" />
+      </geometry>
+      <material name="color5">
+        <color rgba=".95 .36 .12 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/06.stl" />
+      </geometry>
+      <material name="color6">
+        <color rgba=".7 .72 .75 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="pendulum">
+    <inertial>
+      <origin xyz="2.399588278e-13 -0.001311952579 -0.0462128584" />
+      <mass value="0.0178" />
+      <inertia ixx="2.081394355563133e-05" iyy="2.115381994692891e-05" izz="7.841096909855743e-07" ixy="2.8549388814493553e-17" ixz="-2.5449212717164193e-17" iyz="1.4314078410634334e-06" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/07.stl" />
+      </geometry>
+      <material name="color7">
+        <color rgba=".22 .6 .65 1" />
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/08.stl" />
+      </geometry>
+      <material name="color8">
+        <color rgba=".83 .62 .18 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="mount" type="fixed">
+    <parent link="world" />
+    <child link="base" />
+    <origin xyz="0 0 0.0189127" />
+  </joint>
+  <joint name="arm_joint" type="revolute">
+    <parent link="base" />
+    <child link="arm" />
+    <origin xyz="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.7453292519943295" upper="1.7453292519943295" effort="0.12" velocity="8.0" />
+  </joint>
+  <joint name="pendulum_joint" type="continuous">
+    <parent link="arm" />
+    <child link="pendulum" />
+    <origin xyz="6.7e-06 0.075 0.0745" />
+    <axis xyz="0 1 0" />
+  </joint>
+</robot>

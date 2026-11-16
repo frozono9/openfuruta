@@ -1,0 +1,40 @@
+{
+  "events": [
+    "EVENT,TMC_UART_ID,0x2100004d,address=3,turnaround_us=790",
+    "EVENT,TMC_UART_VERIFIED,irun=15,ihold=4,gconf=0x00000144,chopconf=0x14010053",
+    "EVENT,SWINGUP_BEGIN,98481_ms",
+    "EVENT,CATCH_BEGIN",
+    "EVENT,SUCCESS,5s_continuous_upright",
+    "EVENT,CONTROL_TIMING,n=29428,mean_us=2346,max_us=9960,over4ms=3416",
+    "EVENT,TRIAL_FINISH,success_30s_upright,step=-56,speed=0.21068",
+    "EVENT,BRAKE_COMPLETE,step=-56",
+    "EVENT,HOME_BEGIN,from_step=-56",
+    "EVENT,STOP,centered",
+    "EVENT,HOME_COMPLETE,step=0,forward=56,reverse=0,reason=success_30s_upright"
+  ],
+  "rows": [
+    {
+      "timestamp": 1794415893.06516,
+      "device_ms": 135866,
+      "raw_count": 528,
+      "raw_deg": 46.406,
+      "detected": true,
+      "weak": false,
+      "strong": false,
+      "arm_counted_rad": -1.093667,
+      "motor_speed_rad_s": 0.273132,
+      "mode": 3,
+      "upright_error_rad": -0.160787,
+      "pendulum_speed_rad_s": 1.657396,
+      "zero_deg": -124.365221,
+      "angle_deg": 170.771467,
+      "sensor_valid": true,
+      "zero_ready": true,
+      "upright_target_deg": 179.98388,
+      "step_count": -557,
+      "center_ready": true,
+      "shaft_angle_deg": 157.67578125,
+      "shaft_valid": true
+    }
+  ]
+}

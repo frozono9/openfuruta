@@ -1,0 +1,9 @@
+.DS_Store
+.pio/
+.venv*/
+__pycache__/
+*.pyc
+sim/runs/
+timed_braking_reproduced.json
+/v2/hil/delay_entry_comparison.json
+/sim/source/meshes/assembly.glb

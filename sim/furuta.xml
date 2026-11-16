@@ -1,0 +1,44 @@
+<mujoco model="ALatorre_Furuta_single_encoder">
+  <compiler angle="radian" meshdir="assets" inertiafromgeom="false" />
+  <option timestep="0.0005" gravity="0 0 -9.81" integrator="implicitfast" />
+  <visual>
+    <global offwidth="960" offheight="720" />
+  </visual>
+  <asset>
+    <mesh name="part0" file="00.stl" />
+    <mesh name="part3" file="03.stl" />
+    <mesh name="part4" file="04.stl" />
+    <mesh name="part2" file="02.stl" />
+    <mesh name="part5" file="05.stl" />
+    <mesh name="part6" file="06.stl" />
+    <mesh name="part7" file="07.stl" />
+    <mesh name="part8" file="08.stl" />
+  </asset>
+  <worldbody>
+    <light pos=".2 -.2 .5" dir="-.2 .2 -.5" diffuse=".8 .8 .8" />
+    <geom name="floor" type="plane" size="1 1 .01" rgba=".92 .94 .96 1" contype="0" conaffinity="0" />
+    <camera name="overview" pos=".29 .34 .23" xyaxes="-.761 .649 0 -.25 -.293 .923" />
+    <body name="base" pos="0 0 0.0189127">
+      <body name="arm">
+        <joint name="arm_joint" type="hinge" axis="0 0 1" limited="true" range="-1.745329252 1.745329252" damping="0.0002" armature="5e-06" />
+        <body name="pendulum" pos="6.7e-06 0.075 0.0745">
+          <joint name="pendulum_joint" type="hinge" axis="0 1 0" limited="false" damping="1e-05" frictionloss="2e-05" />
+          <inertial pos="2.399588278e-13 -0.001311952579 -0.0462128584" mass="0.0178" fullinertia="2.081394356e-05 2.115381995e-05 7.84109691e-07 2.854938881e-17 -2.544921272e-17 1.431407841e-06" />
+          <geom name="part7" type="mesh" mesh="part7" rgba=".22 .6 .65 1" contype="0" conaffinity="0" group="1" />
+          <geom name="part8" type="mesh" mesh="part8" rgba=".83 .62 .18 1" contype="0" conaffinity="0" group="1" />
+          <site name="coin_center" pos="0 0 -0.075" size=".002" rgba="1 0 0 1" />
+        </body>
+        <inertial pos="7.079457789e-07 0.04341343664 0.0638145924" mass="0.041" fullinertia="3.038354725e-05 8.100837236e-06 2.830907468e-05 7.549720165e-10 3.137820805e-09 -6.710856377e-06" />
+        <geom name="part2" type="mesh" mesh="part2" rgba=".12 .45 .25 1" contype="0" conaffinity="0" group="1" />
+        <geom name="part5" type="mesh" mesh="part5" rgba=".95 .36 .12 1" contype="0" conaffinity="0" group="1" />
+        <geom name="part6" type="mesh" mesh="part6" rgba=".7 .72 .75 1" contype="0" conaffinity="0" group="1" />
+      </body>
+      <geom name="part0" type="mesh" mesh="part0" rgba=".25 .3 .36 1" contype="0" conaffinity="0" group="1" />
+      <geom name="part3" type="mesh" mesh="part3" rgba=".25 .32 .4 1" contype="0" conaffinity="0" group="1" />
+      <geom name="part4" type="mesh" mesh="part4" rgba=".38 .45 .53 1" contype="0" conaffinity="0" group="1" />
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="motor_torque" joint="arm_joint" gear="1" ctrllimited="true" ctrlrange="-1 1" />
+  </actuator>
+</mujoco>

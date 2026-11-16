@@ -1,0 +1,33 @@
+{
+  "mass_kg": {
+    "arm": 0.03,
+    "pendulum_print": 0.006,
+    "coin": 0.0078,
+    "sensor": 0.003,
+    "bearing_outer": 0.008,
+    "bearing_inner": 0.004
+  },
+  "physics_dt": 0.0005,
+  "control_dt": 0.01,
+  "episode_seconds": 10.0,
+  "arm_limit_deg": 90.0,
+  "hard_stop_deg": 100,
+  "max_speed_rad_s": 8.0,
+  "max_accel_rad_s2": 80.0,
+  "microsteps": 16,
+  "full_steps_per_rev": 200,
+  "motor_peak_torque_nm": 0.12,
+  "motor_rolloff_rad_s": 20.0,
+  "motor_electrical_cycles_per_rev": 50,
+  "motor_damping_nm_s": 0.002,
+  "rotor_inertia_kg_m2": 5e-06,
+  "arm_damping_nm_s": 0.0002,
+  "hinge_damping_nm_s": 1e-05,
+  "hinge_friction_nm": 2e-05,
+  "encoder_bits": 12,
+  "encoder_noise_rad": 0.001,
+  "sensor_delay_steps": 1,
+  "velocity_filter_alpha": 0.35,
+  "randomization_fraction": 0.15,
+  "notes": "Geometry from Alex's STEP. All masses except nominal euro 50-cent mass are unmeasured estimates. Motor strength, rolloff, damping, inertia, friction, limits and sensor timing are unmeasured starting assumptions. Rigid friction fit. No lower encoder. 2026-11-10 STEP revision: sensor relocated1.5mm. Existing assumed component masses retained, not physically measured. Versioned candidate; historic validation uses original model."
+}

@@ -1,0 +1,20 @@
+{
+  "gymnasium_api": "pass",
+  "two_joints_one_actuator": "pass",
+  "urdf_import": "pass",
+  "coin_swing_diameter_m": 0.15,
+  "no_privileged_state_in_observation": "pass",
+  "seed_reproducibility": "pass",
+  "passive_energy_j": {
+    "start": 0.04250354559675861,
+    "end": 0.04172245841725378
+  },
+  "small_command_tracking_error_rad": [
+    0.0005933780583399217,
+    0.0005933542271192443
+  ],
+  "lost_steps_not_magically_corrected": "pass",
+  "physical_arm_limit_termination": "pass",
+  "command_acceleration_limit": "pass",
+  "swingup_environment_smoke": "pass (not trained swing-up)"
+}

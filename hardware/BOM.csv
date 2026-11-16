@@ -1,0 +1,16 @@
+Item,Qty,Specification,Notes
+ESP32 DevKit,1,Classic ESP32 with ESP32-WROOM and USB serial,PlatformIO esp32dev target
+Stepper motor,1,STEPPERONLINE 17HE15-1504S with accessible rear shaft,Verify front and rear shafts against STEP
+Stepper driver,1,MKS TMC2209 V2.0_001,Separate VM and VDD plus exposed PDN/UART
+Rotary encoder breakout,2,AS5600 module compatible with 3.3 V supply and I2C,One per axis
+Encoder magnet,2,Diametrically magnetized disc,Match holder and breakout geometry
+Hinge bearing,1,608 size 8 x 22 x 7 mm,Select a low-friction bearing
+Counterweight,1,Euro 50-cent coin or firmly mounted 7.8 g equivalent,Verify fit and centre of mass
+12 V DC supply,1,Regulated supply with enough current for motor and driver,Use inline cutoff and hardware-appropriate fuse
+Motor-holder print,1,hardware/print/motor-holder.stl,
+Bottom print,1,hardware/print/bottom.stl,
+Rotary-arm print,1,hardware/print/rotary-arm.stl,
+Pendulum-arm print,1,hardware/print/pendulum-arm.stl,
+Mounting screws and spacers,1 set,Match the motor and breakout mounting holes,Select lengths from actual stack-up
+USB data cable,1,To match the ESP32 board,
+Harness and strain relief,1 set,Flexible sensor leads and appropriately rated motor/power leads,
